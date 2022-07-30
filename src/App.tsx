@@ -6,13 +6,13 @@ import { IoMdArrowBack, IoIosMore, IoIosSettings } from "react-icons/io";
 function App() {
   return (
     <div className=' w-full h-full flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
-      <div className=' h-screen items-center flex-1 bg-[#f7f0f6] flex flex-col  ' >
-        <div className=' w-full flex justify-between flex-row p-3 ' >
+      <div className=' h-screen flex-1 items-center bg-[#f7f0f6] flex flex-col p-3  ' >
+        <div className=' w-full flex relative justify-between flex-row  ' >
           <div className=' w-10 h-10 bg-pink-400 rounded-lg ' >
 
           </div>
           <div className=' w-full hidden absolute lg:flex justify-center' > 
-            <div className=' w-full bg-white px-3 h-11 flex items-center justify-center rounded-xl ' >
+            <div className=' w-fit bg-white px-3 h-11 flex items-center justify-center rounded-xl ' >
               <button className=' px-2 mr-3 ' >Swap</button>
               <button className=' px-2 mx-3 ' >Pool</button>
               <button className=' px-2 mx-3 ' >Vote</button>
