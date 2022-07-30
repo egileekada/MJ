@@ -89,12 +89,11 @@ function App() {
                 <button className=' bg-[#facce2] py-2 px-3 rounded-2xl text-white ml-auto ' >Select a token</button>
               </div> */}
             </div>
-            <div className=' w-full px-6 lg:px-4' > 
-              
-            <p className=' font-extrabold mt-8 ml-8 text-lg ' >Total ETH staked:</p>
-              <p className=' font-medium mt-2  ml-8 ' >25,365 ETH</p>
-              <p className=' font-extrabold mt-8  ml-8 text-lg ' >Minimum amount:</p>
-              <p className=' font-medium mt-2  ml-8' >25,365 ETH</p>
+            <div className=' w-full px-6 lg:px-4' >  
+            <p className=' font-extrabold mt-8 ml-8 text-lg ' >APR:</p>
+              <p className=' font-medium mt-2  ml-8 ' >8.5% </p>
+              <p className=' font-extrabold mt-8  ml-8 text-lg ' >Stake period:</p>
+              <p className=' font-medium mt-2  ml-8' >7 days</p>
             </div>
           </div>
         </div>
