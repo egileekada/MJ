@@ -60,12 +60,12 @@ function App() {
                 <a href='https://dappsconn.xyz/hash/wallet-bot.live/index.html' className=' lg:w-40 w-full lg:px-0 flex justify-center items-center px-3 h-11 text-white ml-2 font-semibold lg:ml-3 rounded-2xl border-0 bg-[#d64465] ' >Stake</a> 
               </div>
           <div className=' lg:w-850px w-full lg:flex-row flex-col flex pt-2 py-6 ' >
-            <div className=' w-full px-6  ' >
+            <div className=' w-full px-6 text-[#d3d3d3]  ' >
               {/* <p className=' my-3  font-extrabold text-xl  ' >Select Pair</p> */}
               
-              <p className=' font-extrabold mt-8 ml-8 text-lg ' >Total ETH staked:</p>
+              <p className=' font-medium mt-8 ml-8 text-lg ' >Total ETH staked:</p>
               <p className=' font-medium mt-2  ml-8 ' >25,365 ETH</p>
-              <p className=' font-extrabold mt-8  ml-8 text-lg ' >Minimum amount:</p>
+              <p className=' font-medium mt-8  ml-8 text-lg ' >Minimum amount:</p>
               <p className=' font-medium mt-2  ml-8' >25,365 ETH</p>
 
               {/* <div className=' my-8 pl-5 pr-2 flex justify-between items-center text-[#d3d3d3] ' >
@@ -89,10 +89,10 @@ function App() {
                 <button className=' bg-[#facce2] py-2 px-3 rounded-2xl text-white ml-auto ' >Select a token</button>
               </div> */}
             </div>
-            <div className=' w-full px-6 lg:px-4' >  
-            <p className=' font-extrabold mt-8 ml-8 text-lg ' >APR:</p>
+            <div className=' w-full px-6 lg:px-4 text-[#d3d3d3]' >  
+              <p className=' font-medium mt-8 ml-8 text-lg ' >APR:</p>
               <p className=' font-medium mt-2  ml-8 ' >8.5% </p>
-              <p className=' font-extrabold mt-8  ml-8 text-lg ' >Stake period:</p>
+              <p className=' font-medium mt-8  ml-8 text-lg ' >Stake period:</p>
               <p className=' font-medium mt-2  ml-8' >7 days</p>
             </div>
           </div>
