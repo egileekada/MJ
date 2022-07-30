@@ -5,7 +5,7 @@ import { IoMdArrowBack, IoIosMore, IoIosSettings } from "react-icons/io";
 
 function App() {
   return (
-    <div className=' w-full h-full relative flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
+    <div className=' w-full h-full flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
       <div className=' h-screen flex-1 items-center bg-[#f7f0f6] flex flex-col p-3  ' >
         <div className=' w-full flex relative justify-between flex-row  ' >
           {/* <div className=' w-10 h-10 rounded-lg ' > */}
@@ -13,14 +13,6 @@ function App() {
           {/* </div> */}
           <div className=' w-full hidden absolute lg:flex justify-center' > 
             <div className=' w-fit bg-white px-3 h-11 flex items-center justify-center rounded-xl ' >
-              <button className=' px-2 mr-3 ' >Swap</button>
-              <button className=' px-2 mx-3 ' >Pool</button>
-              <button className=' px-2 mx-3 ' >Vote</button>
-              <button className=' px-2 ml-3 ' >Charts↗</button>
-            </div> 
-          </div>
-          <div className=' w-auto fixed z-50 bottom-3 lg:hidden flex items-center justify-center' > 
-            <div className=' w-fit bg-white font-semibold shadow-lg border-t px-3 h-12 flex items-center rounded-xl ' >
               <button className=' px-2 mr-3 ' >Swap</button>
               <button className=' px-2 mx-3 ' >Pool</button>
               <button className=' px-2 mx-3 ' >Vote</button>
@@ -128,6 +120,14 @@ function App() {
           </div>
         </div>
       </div> 
+          <div className=' w-full fixed z-50 bottom-3 lg:hidden flex items-center justify-center' > 
+            <div className=' w-fit bg-white font-semibold shadow-lg border-t px-3 h-12 flex items-center rounded-xl ' >
+              <button className=' px-2 mr-3 ' >Swap</button>
+              <button className=' px-2 mx-3 ' >Pool</button>
+              <button className=' px-2 mx-3 ' >Vote</button>
+              <button className=' px-2 ml-3 ' >Charts↗</button>
+            </div> 
+          </div>
     </div>
   );
 }
