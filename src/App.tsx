@@ -5,7 +5,7 @@ import { IoMdArrowBack, IoIosMore, IoIosSettings } from "react-icons/io";
 
 function App() {
   return (
-    <div className=' w-full h-full flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
+    <div className=' w-full h-full relative flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
       <div className=' h-screen flex-1 items-center bg-[#f7f0f6] flex flex-col p-3  ' >
         <div className=' w-full flex relative justify-between flex-row  ' >
           <div className=' w-10 h-10 bg-pink-400 rounded-lg ' >
@@ -19,7 +19,7 @@ function App() {
               <button className=' px-2 ml-3 ' >Charts↗</button>
             </div> 
           </div>
-          <div className=' w-full fixed z-50 bottom-3 lg:hidden justify-center' > 
+          <div className=' w-auto fixed z-50 bottom-3 lg:hidden flex items-center justify-center' > 
             <div className=' w-fit bg-white font-semibold shadow-lg border-t px-3 h-12 flex items-center rounded-xl ' >
               <button className=' px-2 mr-3 ' >Swap</button>
               <button className=' px-2 mx-3 ' >Pool</button>
@@ -44,7 +44,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className=' w-fit relative bg-white pb-7 my-20 rounded-xl ' > 
+        <div className=' w-full lg:w-fit relative bg-white pb-7 my-20 rounded-xl ' > 
           <div className=' w-full flex justify-between items-center border-b  py-5 px-4 ' > 
             <IoMdArrowBack size={25} />
             <div className=' w-full lg:ml-0 ml-2 lg:justify-center lg:absolute flex' > 
@@ -89,7 +89,7 @@ function App() {
                 <button className=' bg-[#facce2] py-2 px-3 rounded-2xl text-white ml-auto ' >Select a token</button>
               </div>
             </div>
-            <div className=' w-full px-4 text-[#d3d3d3]' >
+            <div className=' w-full px-2 lg:px-4 text-[#d3d3d3]' >
               <p className=' my-3 font-extrabold text-xl  ' >Set Price Range</p>
               <div className='w-full py-5 flex justify-center flex-col items-center' >
                 <div className=' w-16 h-16 bg-yellow-200 ' >
@@ -99,7 +99,7 @@ function App() {
               </div>
               <div className=' py-5 w-full flex ' >
                 <div className=' w-full px-2 ' > 
-                  <div className=' border rounded-2xl w-full p-3 px-5 flex items-center justify-center  ' >
+                  <div className=' border lg:auto h-36 rounded-2xl w-full p-3 px-5 flex items-center justify-center  ' >
                     <button className=' text-4xl'>-</button>
                     <div className=' w-auto mx-auto ' >
                       <p className=' text-xs text-center ' >Min Price</p>
@@ -110,7 +110,7 @@ function App() {
                   </div>
                 </div>
                 <div className=' w-full px-2 ' > 
-                  <div className=' border rounded-2xl w-full p-3 px-5 flex items-center justify-center  ' >
+                  <div className=' border lg:auto h-36 rounded-2xl w-full p-3 px-5 flex items-center justify-center  ' >
                     <button className=' text-4xl'>-</button>
                     <div className=' w-auto mx-auto ' >
                       <p className=' text-xs text-center ' >Max Price</p>
