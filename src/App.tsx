@@ -41,7 +41,7 @@ function App() {
             <IoMdArrowBack size={25} />
             <div className=' w-full lg:ml-0 ml-2 lg:justify-center lg:absolute flex' > 
               <p className=' font-extrabold lg:flex hidden lg:text-lg' >Stake ETH | The ultimate Ethereum 2.0 Uniswap staking</p>
-              <p className=' font-extrabold lg:hidden text-lg' >Stake ETH</p>
+              <p className=' font-extrabold lg:hidden text-lg' >Stake ETH | The ultimate Ethereum 2.0 Uniswap staking</p>
             </div>
             <div className=' flex items-center' >
               <button className=' text-xs mr-2 lg:flex hidden ' >Clear All</button>
