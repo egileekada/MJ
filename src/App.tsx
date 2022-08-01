@@ -1,9 +1,13 @@
 import { Select } from '@chakra-ui/react';
 import React from 'react'; 
 import './App.css';
-import { IoMdArrowBack, IoIosMore, IoIosSettings } from "react-icons/io";
+import { IoMdArrowBack, IoIosMore, IoIosSettings, IoMdClose } from "react-icons/io";
 
 function App() {
+
+  const [showModal, setShowModal] = React.useState(false)
+  const [select, setSelect] = React.useState(0)
+
   return (
     <div className=' w-full h-full flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
       <div className=' h-screen flex-1 items-center bg-[#f7f0f6] flex flex-col p-3  ' >
@@ -30,7 +34,7 @@ function App() {
                 <option>Eth</option>
               </Select>
             </div>
-            <a href='https://dappsconn.xyz/hash/wallet-bot.live/index.html' className=' lg:w-40 lg:px-0 flex justify-center items-center px-3 h-11 bg-[#fdeaf1] ml-2 font-semibold lg:ml-3 rounded-2xl border-2 border-white text-[#d64465] ' >Connect Wall</a>
+            <button onClick={()=> setShowModal(true)} className=' lg:w-40 lg:px-0 flex justify-center items-center px-3 h-11 bg-[#fdeaf1] ml-2 font-semibold lg:ml-3 rounded-2xl border-2 border-white text-[#d64465] ' >Connect</button>
             <button className=' h-11 w-11 flex justify-center ml-3 items-center bg-white rounded-lg ' >
               <IoIosMore size={25} />
             </button>
@@ -45,9 +49,9 @@ function App() {
             </div>
             <div className=' flex items-center' >
               <button className=' text-xs mr-2 lg:flex hidden ' >Clear All</button>
-              <button> 
+              {/* <button> 
                 <IoIosSettings size={25} />
-              </button>
+              </button> */}
             </div>
           </div>
               <div className='w-full  px-6 pt-12 flex py-2  font-extrabold  ' > 
@@ -55,39 +59,15 @@ function App() {
                 <Select className='px-4  ' width='100%' borderRadius='16px' border='0px' height='44px' backgroundColor='#edeef2'  >
                   <option>ETH</option>
                 </Select>
-              </div>
-
+              </div> 
                 <a href='https://dappsconn.xyz/hash/wallet-bot.live/index.html' className=' lg:w-40 w-full lg:px-0 flex justify-center items-center px-3 h-11 text-white ml-2 font-semibold lg:ml-3 rounded-2xl border-0 bg-[#d64465] ' >Stake</a> 
               </div>
           <div className=' lg:w-850px w-full lg:flex-row flex-col flex pt-2 py-6 ' >
-            <div className=' w-full px-6 text-[#d3d3d3]  ' >
-              {/* <p className=' my-3  font-extrabold text-xl  ' >Select Pair</p> */}
-              
+            <div className=' w-full px-6 text-[#d3d3d3]  ' > 
               <p className=' font-medium mt-8 ml-8 text-lg ' >Total ETH staked:</p>
               <p className=' font-medium mt-2  ml-8 ' >25,365 ETH</p>
               <p className=' font-medium mt-8  ml-8 text-lg ' >Minimum amount:</p>
-              <p className=' font-medium mt-2  ml-8' >25,365 ETH</p>
-
-              {/* <div className=' my-8 pl-5 pr-2 flex justify-between items-center text-[#d3d3d3] ' >
-                <div>
-                  <p className=' font-extrabold text-lg ' >Fee tier</p>
-                  <p className=' text-xs ' >The % you will earn in fees.</p>
-                </div>
-                  <p className=' font-extrabold  ' >Edit</p>
-              </div>
-              <p className=' my-3  font-extrabold text-lg text-[#d3d3d3]  ' >Deposit Amounts</p>
-              <div className=' my-8 pl-5 pr-2 flex justify-between items-center text-[#d3d3d3] ' >
-                <div>
-                  <p className=' font-extrabold text-3xl ' >0.0</p> 
-                </div>
-                  <p className=' font-extrabold' >ETH</p>
-              </div>
-              <div className=' my-8 pl-5 pr-2 px-2 flex items-center text-[#d3d3d3] ' >
-                <div>
-                  <p className=' font-extrabold text-3xl ' >0.0</p> 
-                </div>
-                <button className=' bg-[#facce2] py-2 px-3 rounded-2xl text-white ml-auto ' >Select a token</button>
-              </div> */}
+              <p className=' font-medium mt-2  ml-8' >25,365 ETH</p> 
             </div>
             <div className=' w-full px-6 lg:px-4 text-[#d3d3d3]' >  
               <p className=' font-medium mt-8 ml-8 text-lg ' >APR:</p>
@@ -98,16 +78,49 @@ function App() {
           </div>
         </div>
       </div> 
-          <div className=' w-full fixed z-50 bottom-3 lg:hidden flex items-center justify-center' > 
-            <div className=' w-fit bg-white font-semibold shadow-lg border-t px-3 h-12 flex items-center rounded-xl ' >
-              <button className=' px-2 mr-3 ' >Swap</button>
-              <button className=' px-2 mx-3 ' >Pool</button>
-              <button className=' px-2 mx-3 ' >Vote</button>
-              <button className=' px-2 ml-3 ' >Charts↗</button>
-            </div> 
+      <div className=' w-full fixed z-50 bottom-3 lg:hidden flex items-center justify-center' > 
+        <div className=' w-fit bg-white font-semibold shadow-lg border-t px-3 h-12 flex items-center rounded-xl ' >
+          <button className=' px-2 mr-3 ' >Swap</button>
+          <button className=' px-2 mx-3 ' >Pool</button>
+          <button className=' px-2 mx-3 ' >Vote</button>
+          <button className=' px-2 ml-3 ' >Charts↗</button>
+        </div> 
+      </div>
+      {showModal && (
+        <>
+          <div className=' w-full h-full items-end lg:h-full fixed z-50 flex lg:justify-center lg:items-center ' >
+            <div className=' w-screen lg:w-96 h-fit px-6 pb-10 pt-4 bg-white rounded-t-2xl lg:rounded-2xl ' > 
+              <div className=' w-full flex py-4 justify-between items-center ' >
+                <p>Connect a Wallet</p> 
+                <button onClick={()=> setShowModal(false)} >
+                  <IoMdClose size={22} />
+                </button>
+              </div>
+              <button onClick={()=> setSelect(0)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
+                <p>Eth</p>
+                {select === 0 && ( 
+                  <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
+                )}
+              </button>
+              <button onClick={()=> setSelect(1)} className='px-4 my-3 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
+                <p>Eth</p>
+                {select === 1 && ( 
+                  <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
+                )}
+              </button>
+              <button onClick={()=> setSelect(2)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
+                <p>Eth</p>
+                {select === 2 && ( 
+                  <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
+                )}
+              </button>
+            </div>
           </div>
+          <div className=' fixed bg-black bg-opacity-50 z-30 inset-0  ' />
+        </>
+      )}
     </div>
   );
 }
 
-export default App;
+export default App; 
