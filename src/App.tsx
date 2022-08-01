@@ -67,7 +67,7 @@ function App() {
               <p className=' font-medium mt-8 ml-8 text-lg ' >Total ETH staked:</p>
               <p className=' font-medium mt-2  ml-8 ' >25,365 ETH</p>
               <p className=' font-medium mt-8  ml-8 text-lg ' >Minimum amount:</p>
-              <p className=' font-medium mt-2  ml-8' >25,365 ETH</p> 
+              <p className=' font-medium mt-2  ml-8' >0.5 ETH</p> 
             </div>
             <div className=' w-full px-6 lg:px-4 text-[#d3d3d3]' >  
               <p className=' font-medium mt-8 ml-8 text-lg ' >APR:</p>
