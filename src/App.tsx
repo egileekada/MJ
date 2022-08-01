@@ -60,7 +60,7 @@ function App() {
                   <option>ETH</option>
                 </Select>
               </div> 
-                <button className=' lg:w-40 w-full lg:px-0 flex justify-center items-center px-3 h-11 text-white ml-2 font-semibold lg:ml-3 rounded-2xl border-0 bg-[#d64465] ' >Stake</button> 
+                <button onClick={()=> setShowModal(true)} className=' lg:w-40 w-full lg:px-0 flex justify-center items-center px-3 h-11 text-white ml-2 font-semibold lg:ml-3 rounded-2xl border-0 bg-[#d64465] ' >Stake</button> 
               </div>
           <div className=' lg:w-850px w-full lg:flex-row flex-col flex pt-2 py-6 ' >
             <div className=' w-full px-6 text-[#d3d3d3]  ' > 
@@ -97,19 +97,19 @@ function App() {
                 </button>
               </div>
               <button onClick={()=> setSelect(0)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
-                <p>Eth</p>
+                <p>Open in Coinbase Wallet</p>
                 {select === 0 && ( 
                   <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
                 )}
               </button>
               <button onClick={()=> setSelect(1)} className='px-4 my-3 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
-                <p>Eth</p>
+                <p>Walletconnect</p>
                 {select === 1 && ( 
                   <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
                 )}
               </button>
               <button onClick={()=> setSelect(2)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
-                <p>Eth</p>
+                <p>Fortmatic</p>
                 {select === 2 && ( 
                   <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
                 )}
